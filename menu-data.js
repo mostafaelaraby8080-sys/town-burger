@@ -10,13 +10,59 @@ const MENU_DATA = [
     icon: "🍽️",
     note: "كل وجبة بتتقدم مع: مخلل + سلطة + طحينة + كيس عيش",
     items: [
-      { name: "وجبة كبدة", sizes: [{ label: "صغير", price: 95 }, { label: "كبير", price: 125 }] },
-      { name: "وجبة سجق", sizes: [{ label: "صغير", price: 95 }, { label: "كبير", price: 125 }] },
-      { name: "وجبة كفتة", sizes: [{ label: "صغير", price: 100 }, { label: "كبير", price: 130 }] },
-      { name: "وجبة مشكل", sizes: [{ label: "صغير", price: 100 }, { label: "كبير", price: 130 }] },
-      { name: "وجبة فراخ شيش", sizes: [{ label: "صغير", price: 100 }, { label: "كبير", price: 130 }] },
-      { name: "وجبة فراخ شيش + كفتة", sizes: [{ label: "صغير", price: 110 }, { label: "كبير", price: 140 }] },
-      { name: "وجبة تاون برجر", sizes: [{ label: "صغير", price: 135 }, { label: "كبير", price: 190 }], featured: true },
+      {
+        name: "وجبة كبدة",
+        sizes: [
+          { label: "صغير", price: 100 },
+          { label: "كبير", price: 130 },
+        ],
+      },
+      {
+        name: "وجبة سجق",
+        sizes: [
+          { label: "صغير", price: 100 },
+          { label: "كبير", price: 130 },
+        ],
+      },
+      {
+        name: "وجبة كفتة",
+        sizes: [
+          { label: "صغير", price: 110 },
+          { label: "كبير", price: 140 },
+        ],
+      },
+      {
+        name: "وجبة مشكل",
+        sizes: [
+          { label: "صغير", price: 120 },
+          { label: "كبير", price: 150 },
+        ],
+      },
+      {
+        name: "وجبة تاون برجر",
+        sizes: [
+          { label: "صغير", price: 150 },
+          { label: "كبير", price: 200 },
+        ],
+        featured: true,
+      },
+    ],
+  },
+  {
+    id: "shawarma",
+    title: "ركن الشاورما",
+    icon: "🌯",
+    items: [
+      {
+        name: "وجبة شاورما عربي",
+        sizes: [
+          { label: "صغير", price: 120 },
+          { label: "وسط", price: 190 },
+          { label: "كبير", price: 280 },
+        ],
+      },
+      { name: "كريب شاورما", price: 140 },
+      { name: "رول شاورما", price: 95 },
     ],
   },
   {
@@ -24,9 +70,9 @@ const MENU_DATA = [
     title: "برجر بيف",
     icon: "🍔",
     items: [
-      { name: "برجر سنجل", price: 100 },
-      { name: "برجر تشيز", price: 110 },
-      { name: "برجر دبل", price: 120 },
+      { name: "برجر سنجل", price: 110 },
+      { name: "برجر تشيز", price: 120 },
+      { name: "برجر دبل", price: 130 },
     ],
   },
   {
@@ -34,10 +80,10 @@ const MENU_DATA = [
     title: "برجر تشكن",
     icon: "🍗",
     items: [
-      { name: "تشكن سنجل", price: 100 },
-      { name: "تشكن زنجر", price: 110 },
-      { name: "تشكن دبل", price: 130 },
-      { name: "بيف وتشكن", price: 140 },
+      { name: "تشكن سنجل", price: 110 },
+      { name: "تشكن زنجر", price: 120 },
+      { name: "تشكن دبل", price: 140 },
+      { name: "بيف وتشكن", price: 150 },
     ],
   },
   {
@@ -55,9 +101,27 @@ const MENU_DATA = [
     title: "ركن السندوتشات",
     icon: "🥙",
     items: [
-      { name: "كفتة على الفحم", sizes: [{ label: "صغير", price: 35 }, { label: "كبير", price: 45 }] },
-      { name: "سجق", sizes: [{ label: "صغير", price: 35 }, { label: "كبير", price: 45 }] },
-      { name: "كبدة", sizes: [{ label: "صغير", price: 35 }, { label: "كبير", price: 45 }] },
+      {
+        name: "كفتة على الفحم",
+        sizes: [
+          { label: "صغير", price: 35 },
+          { label: "كبير", price: 45 },
+        ],
+      },
+      {
+        name: "سجق",
+        sizes: [
+          { label: "صغير", price: 35 },
+          { label: "كبير", price: 45 },
+        ],
+      },
+      {
+        name: "كبدة",
+        sizes: [
+          { label: "صغير", price: 35 },
+          { label: "كبير", price: 45 },
+        ],
+      },
       { name: "كبدة على سجق", price: 50 },
       { name: "سوبر كرانشي عيش", price: 55 },
     ],
@@ -69,7 +133,7 @@ const MENU_DATA = [
     items: [
       { name: "بطاطس", price: 35 },
       { name: "كفتة على الفحم", price: 65 },
-      { name: "سجق", price: 65 },
+      { name: "سجق", price: 60 },
       { name: "برجر", price: 65 },
       { name: "بانيه", price: 55 },
       { name: "سوسيس", price: 55 },
@@ -77,6 +141,7 @@ const MENU_DATA = [
       { name: "كرانشي حار", price: 65 },
       { name: "شيش طاووق", price: 65 },
       { name: "ميكس لحوم", price: 75 },
+      { name: "ميكس فراخ", price: 75 },
       { name: "إضافة ميكس جبن", price: 10 },
     ],
   },
@@ -85,11 +150,11 @@ const MENU_DATA = [
     title: "كريبات اللحوم",
     icon: "🥩",
     items: [
-      { name: "كفتة على الفحم", price: 100 },
-      { name: "سجق", price: 95 },
-      { name: "برجر تشيز", price: 95 },
-      { name: "هوت دوج", price: 85 },
-      { name: "مشكل لحوم", price: 105 },
+      { name: "كفتة على الفحم", price: 110 },
+      { name: "سجق", price: 100 },
+      { name: "برجر تشيز", price: 110 },
+      { name: "هوت دوج", price: 90 },
+      { name: "مشكل لحوم", price: 120 },
     ],
   },
   {
@@ -97,13 +162,13 @@ const MENU_DATA = [
     title: "كريبات الفراخ",
     icon: "🍢",
     items: [
-      { name: "بانية", price: 85 },
-      { name: "سوبر كرانشي", price: 100 },
-      { name: "شيش طاووق", price: 100 },
-      { name: "كوردن بلو", price: 100 },
-      { name: "فاهيتا فراخ", price: 105 },
-      { name: "زنجر سوبريم", price: 110 },
-      { name: "ميكس فراخ", price: 110 },
+      { name: "بانية", price: 90 },
+      { name: "سوبر كرانشي", price: 110 },
+      { name: "شيش طاووق", price: 110 },
+      { name: "كوردن بلو", price: 110 },
+      { name: "فاهيتا فراخ", price: 110 },
+      { name: "زنجر سوبريم", price: 120 },
+      { name: "ميكس فراخ", price: 120 },
     ],
   },
   {
@@ -125,11 +190,20 @@ const MENU_DATA = [
     title: "كريبات مكس تاون برجر",
     icon: "⭐",
     items: [
-      { name: "كريب الرايق", desc: "استريس + كفتة على الفحم", price: 120 },
-      { name: "كريب المزنجتي", desc: "شيش طاووق + كفتة على الفحم", price: 120 },
-      { name: "كريب مكس جربل", desc: "كفتة على الفحم + شيش طاووق + بانية", price: 130 },
-      { name: "كريب النووي", desc: "كفتة + برجر + سوسيس", price: 130 },
-      { name: "كريب تاون برجر", desc: "برجر + استريس + كفتة على الفحم + كوردن بلو + ميكس فراخ + ميكس جبن", price: 140, featured: true },
+      { name: "كريب الرايق", desc: "استريس + كفتة على الفحم", price: 130 },
+      { name: "كريب المزنجتي", desc: "شيش طاووق + كفتة على الفحم", price: 130 },
+      {
+        name: "كريب مكس جربل",
+        desc: "كفتة على الفحم + شيش طاووق + بانية",
+        price: 140,
+      },
+      { name: "كريب النووي", desc: "كفتة + برجر + سوسيس", price: 140 },
+      {
+        name: "كريب تاون برجر",
+        desc: "برجر + استريس + كفتة على الفحم + كوردن بلو + ميكس فراخ + ميكس جبن",
+        price: 150,
+        featured: true,
+      },
     ],
   },
   {
@@ -142,8 +216,9 @@ const MENU_DATA = [
         items: [
           { name: "رومي ساده", price: 45 },
           { name: "رومي شيدر", price: 50 },
-          { name: "رومي بيض", price: 55 },
-          { name: "رومي بيض شيدر", price: 50 },
+          { name: "رومي بيض", price: 50 },
+          { name: "رومي بيض شيدر", price: 55 },
+          { name: "رومي موتزريلا", price: 50 },
           { name: "رومي جبن بيض", price: 55 },
           { name: "رومي خضروات", price: 50 },
         ],
@@ -151,20 +226,21 @@ const MENU_DATA = [
       {
         label: "توستات الفراخ",
         items: [
-          { name: "بانيه روم بيض", price: 65 },
-          { name: "بانيه روم بيض شيدر", price: 70 },
-          { name: "شيش روم بيض", price: 75 },
-          { name: "كرانشي روم بيض", price: 75 },
+          { name: "بانيه رومي", price: 65 },
+          { name: "بانيه رومي بيض", price: 70 },
+          { name: "شيش رومي", price: 75 },
+          { name: "كرانشي رومي", price: 75 },
           { name: "ميكس فراخ", price: 80 },
-          { name: "كوردن بلو روم", price: 75 },
+          { name: "كوردن بلو رومي", price: 75 },
         ],
       },
       {
         label: "توستات اللحوم",
         items: [
-          { name: "كفتة روم بيض", price: 70 },
-          { name: "برجر روم بيض", price: 70 },
-          { name: "سوسيس روم بيض", price: 65 },
+          { name: "كفتة رومي", price: 70 },
+          { name: "سجق رومي", price: 70 },
+          { name: "برجر رومي", price: 70 },
+          { name: "سوسيس رومي", price: 65 },
         ],
       },
     ],
@@ -174,10 +250,16 @@ const MENU_DATA = [
     title: "ركن البطاطس",
     icon: "🍟",
     items: [
-      { name: "بطاطس", price: 35 },
-      { name: "بطاطس بالجبنة", price: 40 },
-      { name: "بطاطس شيدر كرانشي", price: 55 },
-      { name: "بطاطس شيدر برجر", price: 70 },
+      {
+        name: "بطاطس",
+        sizes: [
+          { label: "صغير", price: 20 },
+          { label: "كبير", price: 35 },
+        ],
+      },
+      { name: "بطاطس بالجبنة", price: 45 },
+      { name: "بطاطس شيدر كرانشي", price: 80 },
+      { name: "بطاطس شيدر برجر", price: 80 },
     ],
   },
 ];
