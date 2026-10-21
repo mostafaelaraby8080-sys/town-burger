@@ -1,200 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TOWN BURGER | تاون برجر - منيو المأكولات السريعة</title>
-<meta name="description" content="تاون برجر - فاست فود، برجر، كريبات، توست وسندوتشات. اطلب توصيل مباشر أو تواصل معنا.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&family=Cairo:wght@500;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكاديمية محمود مجدي | تعلم البرمجة بوضوح</title>
+<meta name="description" content="منصة تعليمية عربية لتعلم تطوير الويب وبناء مشاريع حقيقية.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- ===== Top bar ===== -->
-<div class="topbar">
-  <a class="topbar__item" href="tel:01270513377">
-    <svg viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
-    <span>01270513377</span>
-  </a>
-  <a class="topbar__item" href="https://www.facebook.com/profile.php?id=100064132299022&locale=ar_AR" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
-    <span>تابعنا على فيسبوك</span>
-  </a>
-  <span class="topbar__item topbar__item--muted">
-    <svg viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.7.2.2.5.3.7.3s.5-.1.7-.3C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-    <span>الرطمة، طريق عزبة البرج - عالسكة مباشرة</span>
-  </span>
-</div>
-
-<!-- ===== Header / Nav ===== -->
-<header class="site-header">
-  <div class="brand">
-    <span class="brand__mark" aria-hidden="true">
-      <svg viewBox="0 0 64 64" width="34" height="34">
-        <path fill="currentColor" d="M8 24c0-9 10.7-16 24-16s24 7 24 16H8z"/>
-        <rect x="6" y="27" width="52" height="6" rx="3" fill="currentColor"/>
-        <rect x="8" y="36" width="48" height="7" rx="3.5" fill="currentColor" opacity=".85"/>
-        <path fill="currentColor" d="M6 46h52c0 6-6 10-13 10H19c-7 0-13-4-13-10z"/>
-      </svg>
-    </span>
-    <span class="brand__text">
-      <strong>TOWN <em>BURGER</em></strong>
-      <small>تاون برجر</small>
-    </span>
-  </div>
-
-  <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-
-  <nav class="main-nav" id="mainNav">
-    <a href="#home" class="nav-link">الرئيسية</a>
-    <a href="#menu" class="nav-link">المنيو</a>
-    <a href="#contact" class="nav-link">تواصل معنا</a>
-  </nav>
-</header>
-
-<!-- ===== Hero ===== -->
-<section class="hero" id="home">
-  <div class="hero__glow"></div>
-  <div class="hero__content">
-    <p class="hero__eyebrow">Fast Food Menu · منيو المأكولات السريعة</p>
-    <h1 class="hero__title">جوعك عندنا&nbsp;له حل</h1>
-    <p class="hero__desc">
-      برجر بيف وتشكن، كريبات تاون الشهيرة، رول سوري، توست وسندوتشات ساخنة —
-      كل ده على السكة مباشرة، طازة وسريعة.
-    </p>
-    <div class="hero__actions">
-      <a href="tel:01270513377" class="btn btn--gold">
-        اطلب الآن <span dir="ltr">01270513377</span>
-      </a>
-      <a href="#menu" class="btn btn--ghost">شوف المنيو</a>
-    </div>
-    <div class="hero__highlights" aria-label="مميزات تاون برجر">
-      <span><b>طازة</b> يوميًا</span>
-      <span><b>سريع</b> على السكة</span>
-      <span><b>طعم</b> يستاهل التجربة</span>
-    </div>
-  </div>
-  <div class="hero__stripe">
-    <span>كريب تاون برجر</span><span>•</span>
-    <span>وجبة تاون برجر</span><span>•</span>
-    <span>الرول السوري</span><span>•</span>
-    <span>توستات ساخنة</span><span>•</span>
-    <span>كريب النووي</span><span>•</span>
-  </div>
-</section>
-
-<!-- ===== Menu ===== -->
-<section class="menu-section" id="menu">
-  <div class="section-head">
-    <p class="section-head__eyebrow">المنيو الكامل</p>
-    <h2>اختار قسمك وابدأ تطلب</h2>
-  </div>
-
-  <div class="category-tabs" id="categoryTabs" role="tablist"></div>
-
-  <div class="menu-panels" id="menuPanels"></div>
-</section>
-
-<!-- ===== Contact ===== -->
-<section class="contact" id="contact">
-  <div class="contact__inner">
-    <div class="contact__info">
-      <p class="section-head__eyebrow">تواصل معنا</p>
-      <h2>عايز تطلب أو عندك سؤال؟</h2>
-      <p class="contact__text">اتصل بينا أو ابعتلنا رسالة على فيسبوك، وهنكون جاهزين نخدمك.</p>
-
-      <ul class="contact__list">
-        <li>
-          <span class="contact__icon">
-            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
-          </span>
-          <div>
-            <strong>اتصل بينا</strong>
-            <a href="tel:01270513377" dir="ltr">01270513377</a>
-          </div>
-        </li>
-        <li>
-          <span class="contact__icon">
-            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.7.2.2.5.3.7.3s.5-.1.7-.3C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-          </span>
-          <div>
-            <strong>موقعنا</strong>
-            <span>الرطمة، طريق عزبة البرج - عالسكة مباشرة</span>
-          </div>
-        </li>
-        <li>
-          <span class="contact__icon">
-            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
-          </span>
-          <div>
-            <strong>فيسبوك</strong>
-            <a href="https://www.facebook.com/profile.php?id=100064132299022&locale=ar_AR" target="_blank" rel="noopener">TownBurger تاون برجر</a>
-          </div>
-        </li>
-      </ul>
-
-      <a class="btn btn--gold btn--wide" href="https://www.facebook.com/profile.php?id=100064132299022&locale=ar_AR" target="_blank" rel="noopener">
-        زور صفحتنا على فيسبوك
-      </a>
-    </div>
-
-    <div class="contact__card">
-      <svg viewBox="0 0 64 64" width="70" height="70" class="contact__mark" aria-hidden="true">
-        <path fill="currentColor" d="M8 24c0-9 10.7-16 24-16s24 7 24 16H8z"/>
-        <rect x="6" y="27" width="52" height="6" rx="3" fill="currentColor"/>
-        <rect x="8" y="36" width="48" height="7" rx="3.5" fill="currentColor" opacity=".85"/>
-        <path fill="currentColor" d="M6 46h52c0 6-6 10-13 10H19c-7 0-13-4-13-10z"/>
-      </svg>
-      <h3>TOWN BURGER</h3>
-      <p>Fast Food Menu</p>
-      <p class="contact__hours">التوصيل متاح على السكة مباشرة</p>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <p>© <span id="year"></span> Town Burger — تاون برجر. جميع الحقوق محفوظة.</p>
-</footer>
-
-<a class="floating-call" href="tel:01270513377" aria-label="اتصل الآن">
-  <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
-</a>
-
-<!-- ===== Floating cart button ===== -->
-<button class="floating-cart" id="floatingCart" aria-label="عرض السلة">
-  <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M7 4h-2l-1 2h2l3.6 7.6-1.4 2.5c-.2.4-.3.8-.3 1.2 0 1.1.9 2 2 2h11v-2H9.8c-.1 0-.2-.1-.2-.2l.1-.2L10.9 15h6.5c.8 0 1.4-.4 1.7-1l3.6-6.6c.2-.3-.1-.7-.4-.7H8.4L7.3 4.4C7.1 4.2 6.9 4 7 4zM9 22c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm9 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
-  <span class="cart-count">0</span>
-</button>
-
-<!-- ===== Cart drawer ===== -->
-<div class="cart-overlay" id="cartOverlay"></div>
-<aside class="cart-panel" id="cartPanel" aria-label="سلة الطلبات">
-  <div class="cart-panel__head">
-    <h3>سلة طلبك <span class="cart-count">0</span></h3>
-    <button class="cart-close" id="cartCloseBtn" aria-label="إغلاق السلة">✕</button>
-  </div>
-
-  <p class="cart-empty" id="cartEmpty">السلة فاضية دلوقتي، دوس "اطلب الآن" على أي صنف من المنيو.</p>
-  <ul class="cart-items" id="cartItems"></ul>
-
-  <div class="cart-panel__footer">
-    <div class="cart-total-row">
-      <span>الإجمالي</span>
-      <strong id="cartTotal">0 ج.م</strong>
-    </div>
-    <button class="btn btn--gold btn--wide" id="checkoutBtn" disabled>
-      <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20.5 3.5A10.9 10.9 0 0 0 12.1 0C5.9 0 .9 5 .9 11.2c0 2 .5 3.9 1.5 5.6L0 24l7.4-2.3a11.2 11.2 0 0 0 4.7 1.1c6.2 0 11.2-5 11.2-11.2 0-3-1.2-5.8-3.3-8.1zM12.1 20.6c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.2 1 1-3.1-.2-.3a9.3 9.3 0 0 1-1.4-4.9c0-5.1 4.2-9.3 9.4-9.3 2.5 0 4.9 1 6.6 2.8a9.2 9.2 0 0 1 2.7 6.5c0 5.2-4.2 9.4-9.3 9.4zm5.1-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.4.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3 1 2.6 1.1 2.7.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.6.2-1.2.1-1.3-.1-.1-.3-.2-.6-.3z"/></svg>
-      اطلب عن طريق واتساب
-    </button>
-  </div>
-</aside>
-
-<script src="menu-data.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+<header class="header"><a class="logo" href="#home"><span class="logo-mark">م</span><span><b>محمود مجدي</b><small>أكاديمية البرمجة</small></span></a><button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">☰</button><nav id="nav"><a href="#courses">الكورسات</a><a href="#roadmaps">المسارات</a><a href="#projects">مشاريع الطلاب</a><a href="#about">عن المدرب</a><a href="#contact">تواصل معي</a></nav><a class="button button-small" href="#courses">ابدأ التعلم</a></header>
+<main id="home">
+<section class="hero"><div class="hero-copy"><span class="eyebrow">تعلم • طبّق • ابنِ مستقبلك</span><h1>البرمجة مش صعبة،<br><em>لما تتعلمها صح.</em></h1><p>منصة عربية تساعدك تتعلم تطوير الويب من الصفر، بخطوات واضحة ومشاريع حقيقية توصلك لأول شغل.</p><div class="actions"><a class="button" href="#courses">استكشف الكورسات <span>←</span></a><a class="button button-ghost" href="#about">اعرف عني أكثر</a></div><div class="stats"><div><strong>+25K</strong><span>طالب بيتعلم معانا</span></div><div><strong>18</strong><span>كورس عملي</span></div><div><strong>4.9/5</strong><span>تقييم الطلاب</span></div></div></div><div class="hero-art"><div class="code-card"><div class="window-dots"><i></i><i></i><i></i></div><code><span class="purple">const</span> <span class="blue">future</span> = {<br>&nbsp;&nbsp;skill: <span class="green">"web development"</span>,<br>&nbsp;&nbsp;mindset: <span class="green">"keep learning"</span>,<br>&nbsp;&nbsp;success: <span class="orange">true</span><br>};<br><span class="purple">return</span> <span class="blue">future</span>;</code></div><div class="float-badge badge-one">⚡ تطبيق عملي</div><div class="float-badge badge-two">✦ بالعربي وببساطة</div></div></section>
+<section class="section" id="courses"><div class="section-heading"><span class="eyebrow">ابدأ من هنا</span><h2>كورسات تخليك <em>تطبّق</em> مش تحفظ</h2><p>محتوى مرتب، شرح بسيط، ومشاريع تقدر تضيفها للبورتفوليو بتاعك.</p></div><div class="cards"><article class="course-card featured"><span class="course-icon">⌘</span><span class="level">الأكثر طلبًا</span><h3>تطوير الويب من الصفر</h3><p>تعلم HTML وCSS وJavaScript وابنِ أول موقع احترافي ليك.</p><div class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b></div><footer><span>24 درس · 8 ساعات</span><button class="link-button" data-course="web">مشاهدة الكورس ←</button></footer></article><article class="course-card"><span class="course-icon green-icon">⚛</span><span class="level">متوسط</span><h3>React للمشاريع الحقيقية</h3><p>حوّل أفكارك لتطبيقات سريعة وقابلة للتوسع باستخدام React.</p><div class="tags"><b>React</b><b>APIs</b><b>Git</b></div><footer><span>32 درس · 12 ساعة</span><button class="link-button" data-course="react">مشاهدة الكورس ←</button></footer></article><article class="course-card"><span class="course-icon orange-icon">◈</span><span class="level">متقدم</span><h3>Next.js وبناء المنتجات</h3><p>ابنِ منتجك الكامل، من الواجهة إلى النشر والأداء.</p><div class="tags"><b>Next.js</b><b>TypeScript</b><b>Vercel</b></div><footer><span>28 درس · 10 ساعات</span><button class="link-button" data-course="next">مشاهدة الكورس ←</button></footer></article></div></section>
+<section class="roadmap section" id="roadmaps"><div><span class="eyebrow">خطتك للتعلم</span><h2>مش عارف تبدأ منين؟<br><em>إحنا راسمين لك الطريق.</em></h2><p>مسارات واضحة تنقلك من مبتدئ لمطور جاهز لسوق العمل، خطوة بخطوة وبدون تشتت.</p><a class="button" href="#courses">شوف المسارات التعليمية</a></div><div class="steps"><div><strong>01</strong><span><b>الأساسيات</b><small>HTML · CSS · JavaScript</small></span></div><div><strong>02</strong><span><b>بناء المشاريع</b><small>React · APIs · Git</small></span></div><div><strong>03</strong><span><b>جاهز للشغل</b><small>Portfolio · Freelance · Career</small></span></div></div></section>
+<section class="section projects" id="projects"><div class="section-heading"><span class="eyebrow">نجاحات نفتخر بيها</span><h2>مشاريع طلابنا <em>بتتكلم عنهم</em></h2></div><div class="project-grid"><article><span>إدارة مالية</span><h3>مصاريفي</h3><small>React · Firebase</small></article><article><span>متجر إلكتروني</span><h3>متجر نُبل</h3><small>Next.js · Stripe</small></article><article><span>منصة تعليمية</span><h3>أكاديمية</h3><small>JavaScript · APIs</small></article></div></section>
+<section class="contact section" id="contact"><div><span class="eyebrow">خلينا نتكلم</span><h2>عندك سؤال؟<br><em>أنا هنا أساعدك.</em></h2><p>ابعتلي رسالتك أو تابع المحتوى المجاني على منصات التواصل.</p></div><div class="contact-links"><a href="https://youtube.com" target="_blank">YouTube <span>↗</span></a><a href="https://linkedin.com" target="_blank">LinkedIn <span>↗</span></a><a href="https://github.com" target="_blank">GitHub <span>↗</span></a><a href="mailto:hello@example.com">Email <span>↗</span></a></div></section>
+</main><footer class="footer"><span>© 2026 محمود مجدي. صُنع بحب للمبرمجين العرب.</span><span>تعلم حاجة جديدة كل يوم.</span></footer>
+<div class="modal" id="courseModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><span class="eyebrow">نظرة على الكورس</span><h2 id="modalTitle">تطوير الويب من الصفر</h2><p>شاهد الدرس التعريفي وابدأ أول خطوة في مسارك التعليمي.</p><div class="video-placeholder">▶<span>الفيديو التعريفي قريبًا</span></div><button class="button" id="modalAction">ابدأ التعلم الآن</button></div></div>
+<button class="chat-trigger" id="chatTrigger" aria-label="فتح مساعد محمود">✦</button><aside class="chat-panel" id="chatPanel" aria-label="المساعد الذكي"><header><span class="avatar">م</span><div><b>المساعد الذكي</b><small>موجهك التقني · متصل الآن</small></div><button id="chatClose" aria-label="إغلاق">×</button></header><div class="chat-messages" id="messages"><div class="message bot">أهلًا! أنا مساعدك التقني. اسألني عن الكورسات أو أي حاجة في البرمجة.</div><div class="suggestions"><button>كيف أبدأ في تطوير الويب؟</button><button>رشح لي مسار للمبتدئين</button></div></div><form id="chatForm"><input id="chatInput" placeholder="اكتب سؤالك هنا..." autocomplete="off"><button aria-label="إرسال">↑</button></form></aside>
+<script src="script.js"></script></body></html>
